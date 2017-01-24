@@ -1,0 +1,292 @@
+<!-- Everything you see within <!-- is a comment and not code -->
+
+<!-- The <style> tag starts the CSS that defines how the webpage looks -->
+<!-- YOU DO NOT NEED TO EDIT THE CSS -->
+<style>
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 30px;  
+}
+
+h1{
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-weight: bold;
+  display: block;
+  padding: 30px 0 10px 0;
+  margin: 0;
+}
+
+li{
+  margin: 0;
+  padding: 10px;
+  background: #f7f7f7;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+li:hover {
+  background: #eee;
+}
+
+li.selected{
+  background: #ccc;
+}
+
+.quiz-results {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  color: #OOO;
+  padding: 20px;
+}
+
+.winner {
+  display: none;
+}
+
+input[type='submit']{
+  outline: 0;
+  border: 1px solid #ccc;
+  background-color: #FFF;
+  padding: 6px 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 4px;
+  margin: 20px auto;
+  display: block;
+}
+
+input[type="submit"]:hover{
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+input[type='submit']:active{
+  -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+
+footer img{
+  margin: 0 auto;
+  display: block;
+}
+
+footer p{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+</style>
+<!-- END OF THE CSS -->
+
+<!-- The <html> tag starts the HTML -->
+<!-- YOU WILL NEED TO EDIT PORTIONS OF THE CODE BELOW -->
+<html>
+
+  <div class="quiz">
+    <h1>
+      <!-- Edit the text within this <h1> tag to edit the title -->
+      What's Your Dating Symbol?
+    </h1>
+    
+    <p>
+      <!-- Edit the text within this <p> tag to edit the instructions -->
+      Take this Vday quiz & discover your dating symbol
+    </p>
+
+    <!-- Each question follows the following structure: -->
+
+    <!-- <h2>1. What do you do with your restaurant leftovers?</h2> -->
+    <!-- <ul> -->
+      <!-- <li data-answer="evil-eye">Eat them the next day for breakfast.</li> -->
+      <!-- <li data-answer="lock-key">Forget about them till my fridge smells like a dead hand.</li> -->
+      <!-- <li data-answer="heart">Spill them on myself as soon as I get in the car because of course.</li> -->
+      <!-- <li data-answer="star">There’s no such thing as leftovers I eat it all I’m a champ.</li> -->
+    <!-- </ul> -->
+
+    <!-- 
+      The magical part of each Question's HTML are the attributes attached to
+      the <li> tags.
+
+      <li data-answer="evil-eye">Eat them the next day for breakfast.</li>
+
+      That 'data-answer="evil-eye"' attribute of the <li> tag tells the quiz 
+      that if this answer is picked a point is added to the evil-eye score.
+      
+      The word 'evil-eye' can be anything as long as it corresponds to a
+      a winner <div>.
+    -->
+
+    <!-- Feel free to edit the code below and make it your own -->
+    <!-- You can delete questions and answers and add as many as you like -->
+    <!-- Just make sure you maintain the conventions and formats -->
+    <h2>1. What do you do with your restaurant leftovers?</h2>
+    <ul>
+      <li data-answer="evil-eye">Eat them the next day for breakfast.</li>
+      <li data-answer="lock-key">Forget about them till my fridge smells like a dead hand.</li>
+      <li data-answer="heart">Spill them on myself as soon as I get in the car because of course.</li>
+      <li data-answer="star">There’s no such thing as leftovers I eat it all I’m a champ.</li>
+    </ul>
+    
+    <h2>2. Your phone dies, what do you do?</h2>
+    <ul class="answers" id="q2">
+      <li data-answer="lock-key">Go back to sleep and hope it was a terrible dream.</li>
+      <li data-answer="moon">Have a technology-free adventure.</li>
+      <li data-answer="heart">Start a new life wherever I am, without GPS I’ll never find home again.</li>
+      <li data-answer="evil-eye">Ask for a stranger’s phone then realize I don’t know any numbers by heart.</li>
+    </ul>
+    
+    <h2>3. What is your preferred bathing method?</h2>
+    <ul>
+      <li data-answer="moon">Bath. I soak till my hands get all pruned then pretend I’m me from the future. </li>
+      <li data-answer="lock-key">Shower. I’ve got stuff to do and I’m probably already late.</li>
+      <li data-answer="star">Some deodorant and perfume c’mon guys there’s a drought.</li>
+      <li data-answer="heart">A quick jump in the pool and if anyone asks I’m a mermaid.</li>
+    </ul>
+
+    <input type="submit" value="Submit Quiz" /></p>
+  </div>
+
+  <div class="quiz-results">
+    <!-- Below you will find the <div>s for that define the winning matches of the quiz -->
+    <div id="heart" class="winner">
+      <h1>You are a Heart</h1>
+      
+      <img src="http://kodewithklossy.com/images/2017-dating-symbol-quiz/vd-quiz-heart-white.gif">
+
+      <p>
+        You wear your emotions on your sleeve and follow your heart.
+      </p>
+
+      <a href="#" class="retake">Retake Quiz</a>
+    </div>
+
+    <div id="lock-key" class="winner">
+      <h1>You are a Lock and Key</h1>
+      
+      <img src="http://kodewithklossy.com/images/2017-dating-symbol-quiz/vd-quiz-key-white.gif">
+
+      <p>
+        You’re genuine and slightly mysterious.
+      </p>
+
+      <a href="#" class="retake">Retake Quiz</a>
+    </div>
+
+    <div id="evil-eye" class="winner">
+      <h1>You are an Evil Eye</h1>
+
+      <img src="http://kodewithklossy.com/images/2017-dating-symbol-quiz/vd-quiz-eye-white.gif">
+
+      <p>
+        Your positivity is what guides you.
+      </p>
+
+      <a href="#" class="retake">Retake Quiz</a>
+    </div>
+
+
+    <div id="star" class="winner">
+      <h1>You are a Star</h1>
+
+      <img src="http://kodewithklossy.com/images/2017-dating-symbol-quiz/vd-quiz-star-white.gif">      
+
+      <p>
+        You’re down to earth and loyal.
+      </p>
+      
+      <a href="#" class="retake">Retake Quiz</a>
+    </div>
+
+
+    <div id="moon" class="winner">
+      <h1>You are a Moon</h1>
+
+      <img src="http://kodewithklossy.com/images/2017-dating-symbol-quiz/vd-quiz-moon-white.gif">            
+
+      <p>
+        You’re extremely creative and contemplative.
+      </p>
+
+      <a href="#" class="retake">Retake Quiz</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Koded by</p>
+    <img src="http://aviflombaum.s3.amazonaws.com/klossy/klossy.png" />
+  </footer>
+</html>
+
+<script type="text/javascript">
+  'use strict';
+  var score = {};
+
+  var answers = document.getElementsByTagName("li");
+  for (var answer of answers){
+    score[answer.dataset.answer] = score[answer.dataset.answer] || 0;
+
+    answer.addEventListener("click", function(){
+      var question = this.parentElement;
+      var otherAnswers = question.children;
+      var thisAnswer = this;
+
+      for (var otherAnswer of otherAnswers){
+        otherAnswer.className = "";
+      }
+
+      thisAnswer.className = "selected";
+    });  
+
+  }
+
+  var submit = document.querySelector("input[type='submit']");
+  submit.addEventListener("click", function(){
+    var selectedAnswers = document.querySelectorAll("li.selected");
+    for (var selectedAnswer of selectedAnswers){
+      score[selectedAnswer.dataset.answer] += 1
+    }
+    
+    var quiz = document.querySelector("div.quiz");
+    quiz.style = "display: none";
+
+    var winner = Object.keys(score).reduce(function(a, b){ return score[a] > score[b] ? a : b });
+    var winnerDiv = document.querySelector("div#"+winner);
+    winnerDiv.style = "display: block;"
+  })
+
+  var retakeLinks = document.querySelectorAll("a.retake");
+  for (var retakeLink of retakeLinks){
+    retakeLink.addEventListener('click', function(e){
+      e.preventDefault();
+
+      var winnerDivs = document.querySelectorAll("div.winner");
+      for (var winnerDiv of winnerDivs){
+        winnerDiv.style = "display: none";
+      }
+
+      var quiz = document.querySelector("div.quiz");
+      quiz.style = "display: block";
+    });
+
+  }
+</script>

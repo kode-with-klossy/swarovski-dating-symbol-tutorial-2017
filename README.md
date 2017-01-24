@@ -2,6 +2,8 @@
 
 ## How to Make Your Own Quiz
 
+
+
 The key to making your own quiz is picking a few possible matches for the person. For example, our Dating Symbol Quiz matches you with 1 of 5 possible Swarvoski Charms. You are either a "Heart", "Moon", "Evil Eye", "Lock and Key", or "Star" charm. Each time you pick an answer in the quiz, our code is adding a point to one charm's score. At the end of the quiz, the charm with the most points is how we match you.
 
 If you are making your own quiz, it's a good idea to pick 3-5 things you are going to match people to. Your quiz might be "What Pie are You?" (in honor of my favorite upcoming holiday, Pi Day on March 14th) and the answers match a person to either a "Blueberry Pie", a "Rasberry Pie", "A Ruhbarb Pie", "Pumpkin Pie", or "Apple Pie".
