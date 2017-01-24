@@ -148,7 +148,7 @@ footer p{
     </ul>
     
     <h2>2. Your phone dies, what do you do?</h2>
-    <ul class="answers" id="q2">
+    <ul>
       <li data-answer="lock-key">Go back to sleep and hope it was a terrible dream.</li>
       <li data-answer="moon">Have a technology-free adventure.</li>
       <li data-answer="heart">Start a new life wherever I am, without GPS I’ll never find home again.</li>
@@ -278,7 +278,8 @@ footer p{
   for (var retakeLink of retakeLinks){
     retakeLink.addEventListener('click', function(e){
       e.preventDefault();
-
+      score = {};
+      
       var winnerDivs = document.querySelectorAll("div.winner");
       for (var winnerDiv of winnerDivs){
         winnerDiv.style = "display: none";
